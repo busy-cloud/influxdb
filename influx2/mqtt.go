@@ -21,7 +21,7 @@ func subscribe() {
 		pid := ss[1]
 		id := ss[2]
 
-		err = Write(pid, id, time.Now().Unix(), values)
+		err = Write(pid, id, time.Now().UnixMilli(), values)
 		if err != nil {
 			log.Error(err)
 		}

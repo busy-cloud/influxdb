@@ -20,7 +20,7 @@ type Device struct {
 
 func deviceHistory(ctx *gin.Context) {
 	var dev Device
-	has, err := db.Engine.ID(ctx.GetString("id")).Get(&dev)
+	has, err := db.Engine.ID(ctx.Param("id")).Get(&dev)
 	if err != nil {
 		curd.Error(ctx, err)
 		return

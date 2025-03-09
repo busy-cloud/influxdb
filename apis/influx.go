@@ -2,7 +2,6 @@ package apis
 
 import (
 	"github.com/busy-cloud/boat/api"
-	"github.com/busy-cloud/boat/curd"
 	"github.com/busy-cloud/boat/db"
 	"github.com/busy-cloud/influxdb/influx2"
 	"github.com/gin-gonic/gin"
@@ -20,13 +19,13 @@ type Device struct {
 
 func deviceHistory(ctx *gin.Context) {
 	var dev Device
-	has, err := db.Engine.ID(ctx.Param("id")).Get(&dev)
+	has, err := db.Engine().ID(ctx.Param("id")).Get(&dev)
 	if err != nil {
-		curd.Error(ctx, err)
+		api.Error(ctx, err)
 		return
 	}
 	if !has {
-		curd.Fail(ctx, "找不到设备")
+		api.Fail(ctx, "找不到设备")
 		return
 	}
 
@@ -38,9 +37,9 @@ func deviceHistory(ctx *gin.Context) {
 
 	points, err := influx2.Query(dev.ProductId, dev.Id, key, start, end, window, method)
 	if err != nil {
-		curd.Error(ctx, err)
+		api.Error(ctx, err)
 		return
 	}
 
-	curd.OK(ctx, points)
+	api.OK(ctx, points)
 }

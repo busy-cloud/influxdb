@@ -4,7 +4,7 @@ import (
 	"github.com/busy-cloud/boat/boot"
 	"github.com/busy-cloud/boat/log"
 	"github.com/busy-cloud/boat/web"
-	_ "github.com/busy-cloud/influxdb/boot"
+	_ "github.com/busy-cloud/influxdb"
 	"os"
 	"os/signal"
 	"syscall"

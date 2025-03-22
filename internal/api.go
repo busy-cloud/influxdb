@@ -1,9 +1,8 @@
-package apis
+package internal
 
 import (
 	"github.com/busy-cloud/boat/api"
 	"github.com/busy-cloud/boat/db"
-	"github.com/busy-cloud/influxdb/influx2"
 	"github.com/gin-gonic/gin"
 )
 
@@ -35,7 +34,7 @@ func deviceHistory(ctx *gin.Context) {
 	window := ctx.DefaultQuery("window", "10m")
 	method := ctx.DefaultQuery("method", "mean") //last
 
-	points, err := influx2.Query(dev.ProductId, dev.Id, key, start, end, window, method)
+	points, err := Query(dev.ProductId, dev.Id, key, start, end, window, method)
 	if err != nil {
 		api.Error(ctx, err)
 		return

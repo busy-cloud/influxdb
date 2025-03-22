@@ -1,4 +1,4 @@
-package influx2
+package internal
 
 import (
 	"context"

@@ -6,8 +6,8 @@ github.com/RaveNoX/go-jsoncommentstrip v1.0.0/go.mod h1:78ihd09MekBnJnxpICcwzCMz
 github.com/apapsch/go-jsonmerge/v2 v2.0.0 h1:axGnT1gRIfimI7gJifB699GoE/oq+F2MU7Dml6nw9rQ=
 github.com/apapsch/go-jsonmerge/v2 v2.0.0/go.mod h1:lvDnEdqiQrp0O42VQGgmlKpxL1AP2+08jFMw88y4klk=
 github.com/bmatcuk/doublestar v1.1.1/go.mod h1:UD6OnuiIn0yFxxA2le/rnRU1G4RaI4UvFv1sNto9p6w=
-github.com/busy-cloud/boat v0.2.2 h1:9qIPzwq7O+mLYnC4kX+DdvrooeOAKu72/LMNqPhs9CM=
-github.com/busy-cloud/boat v0.2.2/go.mod h1:rl15bgj9JKV/fQKUi+OxHRlMf36lDc62WG9AF9rhFvs=
+github.com/busy-cloud/boat v0.2.3 h1:2y0YV81GDdwjlYS8biVhtXVn2TO0DtoFjcmCqgePrwg=
+github.com/busy-cloud/boat v0.2.3/go.mod h1:rl15bgj9JKV/fQKUi+OxHRlMf36lDc62WG9AF9rhFvs=
 github.com/bytedance/sonic v1.12.10 h1:uVCQr6oS5669E9ZVW0HyksTLfNS7Q/9hV6IVS4nEMsI=
 github.com/bytedance/sonic v1.12.10/go.mod h1:uVvFidNmlt9+wa31S1urfwwthTWteBgG0hWuoKAXTx8=
 github.com/bytedance/sonic/loader v0.1.1/go.mod h1:ncP89zfokxS5LZrJxl5z0UJcsk4M4yY2JpfqGeCtNLU=

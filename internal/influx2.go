@@ -64,7 +64,7 @@ func Query(table, id, name, start, end, window, method string) ([]*Point, error)
 		//result.TableChanged() 查询多个数值的情况？？？
 		records = append(records, &Point{
 			Value: result.Record().Value(),
-			Time:  result.Record().Time().Unix(),
+			Time:  result.Record().Time().UnixMilli(),
 		})
 	}
 	return records, result.Err()

@@ -1,9 +1,9 @@
 package internal
 
 import (
+	"github.com/busy-cloud/boat/json"
 	"github.com/busy-cloud/boat/log"
 	"github.com/busy-cloud/boat/mqtt"
-	"github.com/bytedance/sonic"
 	"strings"
 	"time"
 )
@@ -11,7 +11,7 @@ import (
 func subscribe() {
 	mqtt.Subscribe("history/+/+/values", func(topic string, payload []byte) {
 		var values map[string]interface{}
-		err := sonic.Unmarshal(payload, &values)
+		err := json.Unmarshal(payload, &values)
 		if err != nil {
 			log.Error(err)
 			return

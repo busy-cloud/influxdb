@@ -3,7 +3,7 @@ module github.com/busy-cloud/influxdb
 go 1.23.0
 
 require (
-	github.com/busy-cloud/boat v0.5.4
+	github.com/busy-cloud/boat v0.6.9
 	github.com/gin-gonic/gin v1.10.1
 	github.com/influxdata/influxdb-client-go/v2 v2.14.0
 )

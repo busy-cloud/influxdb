@@ -17,14 +17,12 @@ func init() {
 	config.Register(MODULE, &config.Form{
 		Title:  "Influxdb数据库配置",
 		Module: MODULE,
-		Form: smart.Form{
-			Fields: []smart.Field{
-				{Key: "enable", Label: "启用", Type: "switch"},
-				{Key: "url", Label: "服务器地址", Type: "text", Default: "http://127.0.0.1:8086"},
-				{Key: "org", Label: "Org", Type: "text"},
-				{Key: "bucket", Label: "Bucket", Type: "text"},
-				{Key: "token", Label: "Token", Type: "text"},
-			},
+		Fields: []smart.Field{
+			{Key: "enable", Label: "启用", Type: "switch"},
+			{Key: "url", Label: "服务器地址", Type: "text", Default: "http://127.0.0.1:8086"},
+			{Key: "org", Label: "Org", Type: "text"},
+			{Key: "bucket", Label: "Bucket", Type: "text"},
+			{Key: "token", Label: "Token", Type: "text"},
 		},
 	})
 }
